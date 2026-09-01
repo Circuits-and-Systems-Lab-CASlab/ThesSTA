@@ -1,0 +1,15 @@
+# ASAP7 is tracked as a git submodule (see .gitmodules), sky130hs is
+# vendored directly since it's small. This just catches anything stray
+# dropped under PDK/ outside those two.
+/Automated-Testcases/PDK/*
+!/Automated-Testcases/PDK/ASAP7
+!/Automated-Testcases/PDK/sky130hs
+
+# Regression test run artifacts
+/Automated-Testcases/tests/results/
+
+# Design flow run artifacts (default locations; overrides via
+# LOG_DIR/REPORTS_DIR/RESULTS_DIR aren't tracked here)
+/Automated-Testcases/logs/
+/Automated-Testcases/reports/
+/Automated-Testcases/results/

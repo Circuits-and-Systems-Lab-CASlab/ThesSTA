@@ -1,0 +1,103 @@
+library (mini) {
+  technology (cmos);
+  delay_model : table_lookup;
+
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1nW";
+  capacitive_load_unit (1, pf);
+
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 1.8;
+
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 1.5;
+
+  slew_lower_threshold_pct_rise : 10;
+  slew_upper_threshold_pct_rise : 90;
+  slew_lower_threshold_pct_fall : 10;
+  slew_upper_threshold_pct_fall : 90;
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+
+  lu_table_template (delay_tmpl) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.02, 1.0");
+    index_2 ("0.02, 1.0");
+  }
+
+  cell (INV1) {
+    area : 1.2544;
+    cell_leakage_power : 0.5;
+    pin (A) {
+      direction : input;
+      capacitance : 0.002;
+    }
+    pin (Y) {
+      direction : output;
+      function : "A'";
+      max_capacitance : 1.0;
+      timing () {
+        related_pin : "A";
+        timing_sense : negative_unate;
+        cell_rise (delay_tmpl) {
+          values ("0.02, 0.05", \
+                  "0.05, 0.12");
+        }
+        rise_transition (delay_tmpl) {
+          values ("0.03, 0.08", \
+                  "0.08, 0.18");
+        }
+        cell_fall (delay_tmpl) {
+          values ("0.02, 0.05", \
+                  "0.05, 0.12");
+        }
+        fall_transition (delay_tmpl) {
+          values ("0.03, 0.08", \
+                  "0.08, 0.18");
+        }
+      }
+    }
+  }
+
+  cell (BUF1) {
+    area : 1.2544;
+    cell_leakage_power : 0.5;
+    pin (A) {
+      direction : input;
+      capacitance : 0.002;
+    }
+    pin (Y) {
+      direction : output;
+      function : "A";
+      max_capacitance : 1.0;
+      timing () {
+        related_pin : "A";
+        timing_sense : positive_unate;
+        cell_rise (delay_tmpl) {
+          values ("0.02, 0.05", \
+                  "0.05, 0.12");
+        }
+        rise_transition (delay_tmpl) {
+          values ("0.03, 0.08", \
+                  "0.08, 0.18");
+        }
+        cell_fall (delay_tmpl) {
+          values ("0.02, 0.05", \
+                  "0.05, 0.12");
+        }
+        fall_transition (delay_tmpl) {
+          values ("0.03, 0.08", \
+                  "0.08, 0.18");
+        }
+      }
+    }
+  }
+}

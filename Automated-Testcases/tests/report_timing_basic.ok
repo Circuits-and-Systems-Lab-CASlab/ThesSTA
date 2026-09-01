@@ -1,0 +1,119 @@
+--------------------------------------
+Copyright 2023-2026 - Silicon Highway Technologies, https://sihi-tech.com
+Welcome to the SiHi EDA Toolset!
+----
+For any support questions/issues, please contact us at:
+support@sihi-tech.com, csotiriou@gmail.com
+----
+FREE SOFTWARE - NO WARRANTY
+AS THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+REPAIR OR CORRECTION
+--------------------------------------
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+LEF Contains 2 Components, 1 Sites, 2 Layers, 0 Vias, 0 Via Rules
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+WARNING: Layer stack information has not been loaded yet!
+WARNING: No checks will be performed for the validity of the layer information presented in the following PIN sections!
+LEF Library Output Pin Names List: Y.
+LEF Library Input Pin Names List: A.
+LEF Library Common (Input or Output) Pin Names List: 
+DEBUG: Specified Corners = 1
+DEBUG: Corner 0, Specified Library Files = 1
+Parsing file: <TESTCASE_DATA>/mini.lib (0 of 1) (0 of 1)
+Time Unit "1ns"
+Pass 1 complete.
+Pass 2 complete.
+--------------------------------------
+Library: mini
+--------------------------------------
+--------------------------------------
+LIB Library Cells Number: 2
+	Combinational: 2
+	Sequential: 0
+Time Unit: 1ns
+Capacitance Unit: 1pF
+Voltage Unit: 1V
+Current Unit: 1mA
+Leakage Power Unit: 1nW
+Switching Power Unit: 1W
+Internal Power Unit: 1W
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+DEBUG: 6 Maximum Wires across all Modules.
+INFO: Initial Verilog Syntax Analysis Successful.
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Module mini_top Declared.
+INFO: Found Total of 1 Verilog Module Declarations, 2 Gate-Level Instances, and 9 Gate-Level Pins.
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Module mini_top Declared.
+- 3 Module Ports, 2 Instantiations, 7 Connections.
+INFO: Found Total of 1 Verilog Module Declarations, 2 Gate-Level Instances, and 9 Gate-Level Pins.
+DEBUG: 0 Special Nets across all Modules (HIGHFANOUT = 128).
+INFO: Verilog Netlist Loaded.
+INFO: Top-level Verilog Module Detected as mini_top (2 Components).
+INFO: Top-level Verilog Module mini_top (3 Ports).
+INFO: HIERARCHICAL GATEPIN/COMPONENT SIZES VALIDATED OK
+WARNING: Unable to find Site CORE in Declared LEF Sites!
+WARNING: Using Default Declared LEF Site unit
+INFO: Placement Site Successfully Set to CORE (0.460 x 2.720)
+INFO: Total Standard Cell Area = 5.005um^2
+INFO: AREA VALIDATED OK
+INFO: Creating Physical Containers.
+Module: mini_top
+Global Hierarchy Name: mini_top/
+INFO: Physical Container Creation Complete.
+Clock (0):
+	Name: clk
+	Source: mini_top/clk
+	Period: 1.0000000
+	Async. Offset: 0.0000000
+	Duty cycle:
+		Uncertainty:
+			Setup: 0.0000000
+			Hold: 0.0000000
+			Rise: 0.0000000
+			Fall: 0.0000000
+		Edges:
+			Rising: 0.0000000, Falling: 0.5000000
+	Type: User-Defined Clock.
+mini_top/in mini_top/clk
+WARNING: Skipping PI mini_top/clk, as is defined as a Clock.
+TEST: report_timing_basic OK
+mini_top/out
+INFO: Timing RC Mode is Elmore, Lumped RC.
+INFO: Timing Model is NLDM.
+WARNING: Resetting RC Mode to lumpedRC, as no Placement Data Exists for the Current Flow Step!
+INFO: Top-Level Module is mini_top.
+INFO: Top-Level Module is mini_top.
+STA Progress: 11.11%
+STA Progress: 33.33%
+STA Progress: 55.56%
+INFO: Longest Path Level = 5, Gatepin = mini_top/out
+INFO: Top-Level Module is mini_top.
+--------------------------------------
+Dumping Longest Path to Gatepin mini_top/out
+1: in (Delay = 0.0000000 r) (r: 0.0000000, f: 0.0000000) (Load: 0.002000) (Wireload: 0.000000)
+2: u1/A (INV1) (Delay = 0.0000000 r) (r: 0.0000000, f: 0.0000000) (Load: 0.000000) (Wireload: 0.000000)
+3: u1/Y (INV1) (Delay = 0.0188517 f) (r: 0.0280800, f: 0.0280800) (Load: 0.002000) (Wireload: 0.000000)
+4: u2/A (BUF1) (Delay = 0.0188517 f) (r: 0.0280800, f: 0.0280800) (Load: 0.000000) (Wireload: 0.000000)
+5: u2/Y (BUF1) (Delay = 0.0384801 f) (r: 0.0293834, f: 0.0293834) (Load: 0.000000) (Wireload: 0.000000)
+6: out (Delay = 0.0384801 f) (r: 0.0293834, f: 0.0293834) (Load: 0.000000) (Wireload: 0.000000)
+--------------------------------------
+Data required arrival time: 1.0000000
+Data arrival time: 0.0384801
+Slack: (MET)	 0.961520
+Extrapolation Counters:
+	Intervals: 0.1, 0.2, 0.3, 0.4, 0.5, 1, 2, 3, >= 4
+	Vertical lower Counters:   0,0,0,0,0,0,4,0,0,0
+	Vertical upper Counters:   0,0,0,0,0,0,0,0,0,0
+	Horizontal lower Counters: 4,0,0,0,0,0,4,0,0,0
+	Horizontal upper Counters: 0,0,0,0,0,0,0,0,0,0
+Total Extrapolation 12 (75.00%), Total Interpolations 4  (25.00%)
+Thank you. Bye now.

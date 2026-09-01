@@ -1,0 +1,28 @@
+--------------------------------------
+Copyright 2023-2026 - Silicon Highway Technologies, https://sihi-tech.com
+Welcome to the SiHi EDA Toolset!
+----
+For any support questions/issues, please contact us at:
+support@sihi-tech.com, csotiriou@gmail.com
+----
+FREE SOFTWARE - NO WARRANTY
+AS THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+REPAIR OR CORRECTION
+--------------------------------------
+TEST: load_lef OK
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+LEF Contains 2 Components, 1 Sites, 2 Layers, 0 Vias, 0 Via Rules
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+WARNING: Layer stack information has not been loaded yet!
+WARNING: No checks will be performed for the validity of the layer information presented in the following PIN sections!
+LEF Library Output Pin Names List: Y.
+LEF Library Input Pin Names List: A.
+LEF Library Common (Input or Output) Pin Names List: 
+Thank you. Bye now.

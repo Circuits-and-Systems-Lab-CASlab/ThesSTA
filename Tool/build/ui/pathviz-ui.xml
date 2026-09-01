@@ -1,0 +1,217 @@
+<ui>
+  <menubar name="MainMenu">
+    <menu name="FileMenu" action="FileMenuAction">
+      <menuitem name="Invoke Import Wizard" action="ImportWizardAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Load LEF Technology File" action="LoadLEFAction" always-show-image="true" />
+      <menuitem name="Load Timing Library LIB File" action="LoadLIBAction" always-show-image="true" />
+      <menuitem name="Load VERILOG Netlist" action="LoadVERILOGAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Load DEF File" action="LoadDEFAction" always-show-image="true" />
+      <menuitem name="Load STA Report File" action="LoadSTAAction" always-show-image="true" />
+      <menuitem name="Load SDF Timing File" action="LoadSDFAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Load Design" action="LoadDesignAction" always-show-image="true" />
+      <menuitem name="Save Design" action="SaveDesignAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Source TCL Script" action="SourceTCLAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Load Structural Groups TCL Script" action="LoadCellGroups" always-show-image="true" />
+      <menuitem name="Load Top-Level I/O Placement TCL Script" action="LoadTopLevelIOPlacementTcl" always-show-image="true" />
+      <separator/>
+      <menuitem name="Save Structural Groups TCL Script" action="SaveCellGroups" always-show-image="true" />
+      <menuitem name="Save Structural Groups Report" action="SaveCellGroupsReport" always-show-image="true" />
+      <menuitem name="Save Structural Groups Components List" action="SaveCellGroupsComponentsList" always-show-image="true" />
+      <menuitem name="Save Structural Groups Placement TCL Script" action="SaveCellGroupsPlacementTcl" always-show-image="true" />
+      <menuitem name="Save Structural Groups Parameters TCL Script" action="SaveCellGroupsParametersTcl" always-show-image="true" />
+      <menuitem name="Save Global Component Placement TCL Script" action="SaveComponentsPlacementTcl" always-show-image="true" />
+      <menuitem name="Save Top-Level I/O Placement TCL Script" action="SaveTopLevelIOPlacementTcl" always-show-image="true" />
+      <separator/>
+      <menuitem name="Export Design Data to DEF" action="SaveDEFAction" always-show-image="true" />
+      <menuitem name="Export SDP File" action="SaveSDPAction" always-show-image="true" />
+      <menuitem name="Export Floorplan TCL Script" action="SaveFloorplanTclAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Quit" action="QuitAction" always-show-image="true" />
+    </menu>
+    <menu name="EditMenu" action="EditMenuAction">
+      <menuitem name="Find Gate" action="FindGateAction" always-show-image="true" />
+      <menuitem name="Find Net" action="FindNetAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Highlight Component" action="HighlightComponentAction" always-show-image="true" />
+      <menuitem name="Highlight Cluster" action="HighlightClusterAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Lock Aspect Ratio Enable/Disable" action="LockAspectAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Set Path Offset" action="SetPathOffsetAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Enable/Disable Ruler" action="RulerEnableAction" always-show-image="true" />
+      <menuitem name="Ruler Undo" action="RulerUndoAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Draw Components" action="DrawComponentsAction" always-show-image="true" />
+      <menuitem name="Draw Module Names" action="DrawModuleNamesAction" always-show-image="true" />
+      <menuitem name="Draw Standard Cells Rows" action="DrawRowsAction" always-show-image="true" />
+      <menuitem name="Draw Floorplan Flylines" action="DrawFlylinesAction" always-show-image="true" />
+      <menuitem name="Draw Component Flylines" action="DrawComponentFlylinesAction" always-show-image="true" />
+      <menuitem name="Draw Vias" action="DrawViasAction" always-show-image="true" />
+      <menuitem name="Draw Structural Seed Group BBs" action="DrawLevel0GroupBBsAction" always-show-image="true" />
+      <menuitem name="Draw Blockages" action="DrawBlockagesAction" always-show-image="true" />
+      <menuitem name="Draw Multi-Level Cluster BBs" action="DrawMultiLevelClusterBBsAction" always-show-image="true" />
+      <menuitem name="Draw Net Congestion Bins" action="DrawNetCongestionBinsAction" always-show-image="true" />
+      <menuitem name="Draw Filler Cells" action="DrawPlacementFillerCellsAction" always-show-image="true" />
+      <menuitem name="Draw Placement Density Bins" action="DrawPlacementDensityBinsAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Shift Origin" action="FlipYAction" always-show-image="true" />
+      <menuitem name="Draw Clipping Enable/Disable" action="ClipAction" always-show-image="true" />
+      <menuitem name="Path Drawing on Layout Enable/Disable" action="DefPathAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Print Gate Pin Names in Path Display Enable/Disable" action="DrawGatePinsAction" always-show-image="true" />
+    </menu>    
+    <menu name="ViewMenu" action="ViewMenuAction">
+      <menuitem name="Zoom In" action="ZoomInAction" always-show-image="true" />
+      <menuitem name="Zoom Out" action="ZoomOutAction" always-show-image="true" />
+      <menuitem name="Zoom Fit" action="ZoomFitAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Clear Highlights" action="ClearHighlightsAction" always-show-image="true" />
+    </menu>
+    <menu name="Design" action="DesignAction">
+      <menuitem name="[Alpha Debug 1]" action="DebugAction" always-show-image="true" />
+      <menuitem name="[Alpha Debug 2]" action="DebugAction2" always-show-image="true" />
+      <separator/>
+      <menuitem name="Report Design" action="ReportDesignAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="List Library Information" action="ListLibraryInformationAction" always-show-image="true" />
+      <menuitem name="List Verilog Modules" action="ListVerilogModulesAction" always-show-image="true" />
+      <menuitem name="List Physical Components" action="ListPhysicalComponentsAction" always-show-image="true" />
+      <menuitem name="List Gate Pins" action="ListGatePinsAction" always-show-image="true" />
+      <menuitem name="List Special Nets" action="ListSpecialNetsAction" always-show-image="true" />
+      <menuitem name="List Nets" action="ListNetsAction" always-show-image="true" />
+      <menuitem name="List Top-Level I/Os" action="ListTopLevelIOsAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="List Inter-Component Transitive Connections" action="ListInterComponentTransitiveConnections" always-show-image="true" />
+      <separator/>
+      <menuitem name="List Paths" action="ListPathsAction" always-show-image="true" />
+    </menu>
+    <menu name="Structured Datapath" action="StructuredDatapathAction">
+      <menuitem name="Extract Structural Groups" action="PlacementGroupExtractAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Extract Strongly-Connected Seed Groups" action="ExtractStronglyConnectedSeedGroupsAction" always-show-image="true" />
+      <menuitem name="Grow Structural Seed Groups" action="PlacementSeedGroupGrowAction" always-show-image="true" />      
+      <separator/>
+      <menuitem name="List Structural Groups Summary" action="ListCellGroupsSummaryAction" always-show-image="true" />
+      <menuitem name="List Structural Groups Details" action="ListCellGroupsDetailsAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Remove Structural Groups" action="PlacementGroupsRemoveAction" always-show-image="true" />
+    </menu>
+    <menu name="FloorplanMenu" action="FloorplanAction">
+      <menuitem name="Initialise Floorplan" action="InitialiseFloorplanAction" always-show-image="true" />      
+      <separator/>
+      <menuitem name="Place Top-Level I/O Pins" action="IOPlacementRunAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="List Placement Modules" action="ListPlacementModulesAction" always-show-image="true" />
+      <menuitem name="List Placement Blockages" action="ListPlacementBlockagesAction" always-show-image="true" />
+      <menuitem name="List Placed Top-Level I/O Pins" action="ListPlacedIO" always-show-image="true" />
+      <separator/>
+      <menuitem name="Filter Floorplan Modules" action="FilterFloorplanModulesAction" always-show-image="true" />
+      <menuitem name="Report Floorplan" action="ReportFloorplanAction" always-show-image="true" />
+      <menuitem name="List Floorplan Connections" action="ListFloorplanConnectionsAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Floorplan: Run Optimisation" action="FloorplanRunAction" always-show-image="true" />
+    </menu>
+    <menu name="PlacementMenu" action="PlacementAction">
+      <menuitem name="Placement Setup" action="PlacementSetupAction" always-show-image="true" />      
+      <separator/>
+      <menuitem name="Auto Cluster Pre-Placement and Compaction" action="ClusterAutoPreplaceAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Global Flat Placement" action="GlobalFlatPlacementAction" always-show-image="true" />
+      <menuitem name="Global Placement" action="GlobalPlacementAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Initialise Group-Based Placement" action="InitialisePlacementAction" always-show-image="true" />
+      <menuitem name="Group Placement: Run HPWL-Based Intra-Cluster Optimisation" action="GroupPlacementRunHPWLIntraAction" always-show-image="true" /> 
+      <menuitem name="Group Placement: Run Intra-Cluster Optimisation" action="GroupPlacementRunIntraAction" always-show-image="true" /> 
+      <menuitem name="Group Placement: Run Full Optimisation" action="GroupPlacementRunAction" always-show-image="true" /> 
+      <separator/>
+      <menuitem name="Report Placement Density" action="ReportPlacementDensityAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Report Net Congestion" action="ReportNetCongestionAction" always-show-image="true" />       
+      <menuitem name="Remove Congestion Map" action="RemoveCongestionMapAction" always-show-image="true" />       
+    </menu>
+    <menu name="MLPlacementMenu" action="MLPlacementAction">
+      <menuitem name="Extract Multi-Level GP Clusters" action="MLClustersExtractAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="List Multi-Level GP Clusters Hierarchy" action="ListMLClustersHierarchyAction" always-show-image="true" />
+      <menuitem name="List Multi-Level GP Clusters" action="ListMLClustersAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Remove Multi-Level GP Clusters" action="MLClustersRemoveAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Global ML Flat Placement" action="GlobalFlatMLPlacementAction" always-show-image="true" />
+      <menuitem name="Global ML Placement" action="GlobalMLPlacementAction" always-show-image="true" />      
+    </menu>
+    <menu name="Legalisation" action="LegalisationAction">
+      <menuitem name="Legalise Cluster BBs" action="LegaliseClustersBBsAction" always-show-image="true" />
+      <menuitem name="Legalise Components" action="LegaliseComponentsAction" always-show-image="true" />
+      <menuitem name="Legalise RADHARD Components" action="LegaliseRHComponentsAction" always-show-image="true" />
+    </menu>
+    <menu name="TimingMenu" action="TimingAction">
+      <menuitem name="Create Clock" action="CreateClockAction" always-show-image="true" />
+      <menuitem name="Report Timing Arc Delay" action="ReportTimingArcDelayAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Compute STA Delay" action="ComputeSTADelayAction" always-show-image="true" />
+      <menuitem name="Compute STA Slack" action="ComputeSTASlackAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Report STA Paths" action="ReportSTAPathsAction" always-show-image="true" />
+      <menuitem name="Create STA Histograms" action="CreateSTAHistogramsAction" always-show-image="true" />
+    </menu>
+    <menu name="SETMenu" action="SETAction">
+      <menuitem name="Create Particle Profile" action="CreateParticleProfileAction" always-show-image="true" />
+      <menuitem name="Create SET Scenario" action="CreateSETScenarioAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="ECO SET Generation" action="ECOSETGenerationAction" always-show-image="true" />
+      <menuitem name="ECO SET Propagation" action="ECOSETPropagationAction" always-show-image="true" />
+      <menuitem name="Scenario-based Generation" action="ScenarioBasedGenerationAction" always-show-image="true" />
+      <menuitem name="Scenario-based Propagation" action="ScenarioBasedPropagationAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Fully-Automated Exhaustive SET Analysis" action="FullyAutomatedExhaustiveSETAnalysisAction" always-show-image="true" />
+      <menuitem name="Fully-Automated Fast SET Analysis" action="FullyAutomatedFastSETAnalysisAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="Produce SET Circuit Sensitivities Report" action="ProduceSETCircuitSensitivitiesReportAction" always-show-image="true" />
+    </menu>
+    <menu name="ModesMenu" action="ModesMenuAction">
+      <menuitem name="Single Step Tool Mode" action="singleStepToolModeAction" always-show-image="true" />
+      <menuitem name="Multi Step Tool Mode" action="multiStepToolModeAction" always-show-image="true" />
+      <menuitem name="DEF Diff Tool Mode" action="DEFDiffToolModeAction" always-show-image="true" />
+      <menuitem name="SET Tool Mode" action="SETToolModeAction" always-show-image="true" />
+    </menu>
+<!--
+    <menu name="Analysis" action="AnalysisAction">
+      <menuitem name="Delay Analysis" action="DelayAction" always-show-image="true" />
+      <menuitem name="Area Analysis" action="AreaAction" always-show-image="true" />
+      <menuitem name="Path Analysis" action="PathAction" always-show-image="true" />
+      <menuitem name="Path Similarity Analysis" action="PathSimilarityAction" always-show-image="true" />
+    </menu>    
+-->
+    <menu name="HelpMenu" action="HelpMenuAction">
+      <menuitem name="Help" action="HelpAction" always-show-image="true" />
+      <separator/>
+      <menuitem name="About" action="AboutAction" always-show-image="true" />
+    </menu>
+  </menubar>
+  
+  <toolbar name="MainToolBar">
+      <separator/>
+      <toolitem name="Import Wizard" action="ImportWizardAction" always-show-image="true" />
+      <separator/>
+      <toolitem name="Export Design Data to DEF" action="SaveDEFAction" always-show-image="true" />
+      <toolitem name="Export SDP File" action="SaveSDPAction" always-show-image="true" />
+      <separator/>
+      <toolitem name="Single Step Tool Mode" action="singleStepToolModeAction" always-show-image="true" />
+      <toolitem name="Multi Step Tool Mode" action="multiStepToolModeAction" always-show-image="true" />
+      <toolitem name="DEF Diff Tool Mode" action="DEFDiffToolModeAction" always-show-image="true" />
+      <toolitem name="SET Tool Mode" action="SETToolModeAction" always-show-image="true" />
+      <separator/>
+      <toolitem name="Zoom In" action="ZoomInAction" always-show-image="true" />
+      <toolitem name="Zoom Out" action="ZoomOutAction" always-show-image="true" />
+      <toolitem name="Zoom Fit" action="ZoomFitAction" always-show-image="true" />
+      <separator/>
+  </toolbar>
+
+</ui>

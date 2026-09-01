@@ -1,0 +1,73 @@
+--------------------------------------
+Copyright 2023-2026 - Silicon Highway Technologies, https://sihi-tech.com
+Welcome to the SiHi EDA Toolset!
+----
+For any support questions/issues, please contact us at:
+support@sihi-tech.com, csotiriou@gmail.com
+----
+FREE SOFTWARE - NO WARRANTY
+AS THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+REPAIR OR CORRECTION
+--------------------------------------
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+LEF Contains 2 Components, 1 Sites, 2 Layers, 0 Vias, 0 Via Rules
+Reading LEF file: <TESTCASE_DATA>/mini.lef
+WARNING: Layer stack information has not been loaded yet!
+WARNING: No checks will be performed for the validity of the layer information presented in the following PIN sections!
+LEF Library Output Pin Names List: Y.
+LEF Library Input Pin Names List: A.
+LEF Library Common (Input or Output) Pin Names List: 
+DEBUG: Specified Corners = 1
+DEBUG: Corner 0, Specified Library Files = 1
+Parsing file: <TESTCASE_DATA>/mini.lib (0 of 1) (0 of 1)
+Time Unit "1ns"
+Pass 1 complete.
+Pass 2 complete.
+--------------------------------------
+Library: mini
+--------------------------------------
+--------------------------------------
+LIB Library Cells Number: 2
+	Combinational: 2
+	Sequential: 0
+Time Unit: 1ns
+Capacitance Unit: 1pF
+Voltage Unit: 1V
+Current Unit: 1mA
+Leakage Power Unit: 1nW
+Switching Power Unit: 1W
+Internal Power Unit: 1W
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+DEBUG: 6 Maximum Wires across all Modules.
+INFO: Initial Verilog Syntax Analysis Successful.
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Module mini_top Declared.
+INFO: Found Total of 1 Verilog Module Declarations, 2 Gate-Level Instances, and 9 Gate-Level Pins.
+Reading VERILOG file: <TESTCASE_DATA>/mini.v
+Module mini_top Declared.
+- 3 Module Ports, 2 Instantiations, 7 Connections.
+INFO: Found Total of 1 Verilog Module Declarations, 2 Gate-Level Instances, and 9 Gate-Level Pins.
+DEBUG: 0 Special Nets across all Modules (HIGHFANOUT = 128).
+INFO: Verilog Netlist Loaded.
+TEST: load_verilog OK
+INFO: Top-level Verilog Module Detected as mini_top (2 Components).
+INFO: Top-level Verilog Module mini_top (3 Ports).
+INFO: HIERARCHICAL GATEPIN/COMPONENT SIZES VALIDATED OK
+WARNING: Unable to find Site CORE in Declared LEF Sites!
+WARNING: Using Default Declared LEF Site unit
+INFO: Placement Site Successfully Set to CORE (0.460 x 2.720)
+INFO: Total Standard Cell Area = 5.005um^2
+INFO: AREA VALIDATED OK
+INFO: Creating Physical Containers.
+Module: mini_top
+Global Hierarchy Name: mini_top/
+INFO: Physical Container Creation Complete.
+Thank you. Bye now.
